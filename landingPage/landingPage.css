@@ -1,0 +1,149 @@
+/* @font-face {
+    font-family: Comfortaa;
+    src: url(Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Pacifico;
+    src: url(Fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: Playwrite;
+    src: url(Fonts/Playwrite_IT_Moderna/PlaywriteITModerna-VariableFont_wght.ttf);
+}
+
+
+
+body{
+    background-color: rgb(127, 223, 255);
+    font-family: Comfortaa;
+    font-size: large;
+}
+
+button{
+    background-color: blue;
+    border: 2px solid rgb(102, 134, 248);
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+}
+button:hover{
+    background-color: darkblue;
+
+    animation: buttonEnlarge 500ms normal 10ms forwards; CHATGPT USED HERE for forwards
+
+    transform: scale(3);
+}
+.links{
+    cursor: pointer;
+    font-family: Comfortaa;
+    margin: 50px 100px auto 100px;
+    padding: 10px 10px;
+    
+    transform: scale(2);
+    transition: transform 700ms ease;
+
+}
+@keyframes buttonEnlarge{
+    100%{transform: scale(3);}
+}
+
+
+#bodyContainer{
+    margin: auto;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    height: 100%;
+    transform: translateY(125%);
+}
+#choiceContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+@font-face {
+  font-family: Comfortaa;
+  src: url(Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(Fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Playwrite;
+  src: url(Fonts/Playwrite_IT_Moderna/PlaywriteITModerna-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(127, 223, 255);
+  font-family: Comfortaa;
+  /* font-size: large; */
+}
+
+#bodyContainer {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  width: 100%;
+}
+
+#welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#choiceContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.links {
+  background-color: blue;
+  border: 0.1rem solid rgb(102, 134, 248);
+  border-radius: 30px;
+  padding: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Comfortaa;
+  transition: transform 700ms ease-in-out, background-color 700ms ease-in-out;
+}
+
+.links:hover {
+  background-color: darkblue;
+  transform: scale(1.5);
+  animation: buttonEnlarge 500ms normal 10ms forwards; /*CHATGPT USED HERE for forwards*/
+}
+
+
+@media (max-width: 1024px) {
+    .links {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+      }
+}
+
+@media (max-width: 768px) {
+  #bodyContainer {
+    margin: 1rem;
+    height: 100%;
+  }
+
+  #choiceContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
